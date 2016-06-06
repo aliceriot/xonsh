@@ -27,6 +27,8 @@ Current Developments
 * RC files are now executed directly in the appropriate context.
 * ``_`` is now updated by ``![]``, to contain the appropriate
   ``CompletedCommand`` object.
+* On Windows if bash is not on the path look in the registry for the defaults
+  install directory for GitForWindows. 
 
 **Deprecated:** None
 
@@ -36,6 +38,7 @@ Current Developments
 
 **Fixed:**
 
+* Fixed crashed bash-completer when bash is not avaiable on Windows
 * Fixed bug on Windows where tab-completion for executables would return all files.
 * Fixed bug on Windows which caused the bash $PROMPT variable to be used when no 
   no $PROMPT variable was set in .xonshrc 
